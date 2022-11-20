@@ -1,7 +1,7 @@
 import {LegacyCodaMarshalerType} from './constants';
 import {LegacyMarshalingInjectedKeys} from './constants';
-import {MissingScopesError} from '../../api';
-import {StatusCodeError} from '../../api';
+import {MissingScopesError} from '../../../../api';
+import {StatusCodeError} from '../../../../api';
 
 enum ErrorClassType {
   System = 'System',

@@ -1,26 +1,26 @@
-import type {AWSAccessKeyAuthentication} from './types';
-import type {AWSAssumeRoleAuthentication} from './types';
-import type {Authentication} from './types';
-import type {AuthenticationType} from './types';
-import type {CodaApiBearerTokenAuthentication} from './types';
-import type {CustomAuthentication} from './types';
-import type {CustomHeaderTokenAuthentication} from './types';
-import type {DistributiveOmit} from './type_utils';
-import type {Format} from './types';
-import type {HeaderBearerTokenAuthentication} from './types';
+import type {AWSAccessKeyAuthentication} from '../types';
+import type {AWSAssumeRoleAuthentication} from '../types';
+import type {Authentication} from '../types';
+import type {AuthenticationType} from '../types';
+import type {CodaApiBearerTokenAuthentication} from '../types';
+import type {CustomAuthentication} from '../types';
+import type {CustomHeaderTokenAuthentication} from '../types';
+import type {DistributiveOmit} from '../type_utils';
+import type {Format} from '../types';
+import type {HeaderBearerTokenAuthentication} from '../types';
 import type {MetadataFormulaMetadata} from './api';
-import type {MultiQueryParamTokenAuthentication} from './types';
-import type {NoAuthentication} from './types';
-import type {OAuth2Authentication} from './types';
+import type {MultiQueryParamTokenAuthentication} from '../types';
+import type {NoAuthentication} from '../types';
+import type {OAuth2Authentication} from '../types';
 import type {ObjectPackFormulaMetadata} from './api';
-import type {PackDefinition} from './types';
+import type {PackDefinition} from '../types';
 import type {PackFormulaMetadata} from './api';
-import type {PackVersionDefinition} from './types';
-import type {PostSetup} from './types';
-import type {QueryParamTokenAuthentication} from './types';
+import type {PackVersionDefinition} from '../types';
+import type {PostSetup} from '../types';
+import type {QueryParamTokenAuthentication} from '../types';
 import type {SyncTable} from './api';
-import type {VariousAuthentication} from './types';
-import type {WebBasicAuthentication} from './types';
+import type {VariousAuthentication} from '../types';
+import type {WebBasicAuthentication} from '../types';
 
 // TODO(jonathan): Anything in this file that gets exported in index.ts should probably
 // be removed from there and put into a separate entrypoint. These types should

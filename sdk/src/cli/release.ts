@@ -1,6 +1,6 @@
 import type {ArgumentsCamelCase} from 'yargs';
-import type {BasicPackDefinition} from '..';
-import type {PackVersionDefinition} from '..';
+import type {BasicPackDefinition} from '../../../dist';
+import type {PackVersionDefinition} from '../../../dist';
 import {build} from './build';
 import {createCodaClient} from './helpers';
 import {formatEndpoint} from './helpers';

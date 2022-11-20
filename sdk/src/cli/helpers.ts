@@ -1,5 +1,5 @@
-import type {Authentication} from '../types';
-import type {BasicPackDefinition} from '../types';
+import type {Authentication} from '../../../types';
+import type {BasicPackDefinition} from '../../../types';
 import {Client} from '../helpers/external-api/coda';
 import type {SpawnSyncOptionsWithBufferEncoding} from 'child_process';
 import path from 'path';

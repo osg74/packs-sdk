@@ -1,6 +1,6 @@
 import type {ArgumentsCamelCase} from 'yargs';
 import type {PackMetadataValidationError} from '../testing/upload_validation';
-import type {PackVersionDefinition} from '..';
+import type {PackVersionDefinition} from '../../../dist';
 import type {PackVersionMetadata} from '../compiled_types';
 import type {ValidationError} from '../testing/types';
 import {compilePackBundle} from '../testing/compile';

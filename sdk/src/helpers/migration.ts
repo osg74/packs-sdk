@@ -1,11 +1,11 @@
 import type {ObjectSchemaDefinition} from '../schema';
 import type {ParamDef} from '../api_types';
 import type {PostSetupMetadata} from '../compiled_types';
-import type {SetEndpoint} from '../types';
-import type {SetEndpointDef} from '../types';
+import type {SetEndpoint} from '../../../types';
+import type {SetEndpointDef} from '../../../types';
 import type {SuggestedValueType} from '../api_types';
 import type {UnionType} from '../api_types';
-import {ensureExists} from '../helpers/ensure';
+import {ensureExists} from './ensure';
 
 export function objectSchemaHelper<T extends ObjectSchemaDefinition<string, string>>(schema: T): ObjectSchemaHelper<T> {
   return new ObjectSchemaHelper(schema);

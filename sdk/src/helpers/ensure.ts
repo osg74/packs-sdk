@@ -1,4 +1,4 @@
-import {UserVisibleError} from '../api';
+import {UserVisibleError} from '../../../api';
 
 /**
  * Helper for TypeScript to make sure that handling of code forks is exhaustive,

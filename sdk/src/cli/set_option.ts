@@ -2,7 +2,7 @@ import type {ArgumentsCamelCase} from 'yargs';
 import {PackOptionKey} from './config_storage';
 import type {PackOptions} from './config_storage';
 import {TimerShimStrategy} from '../testing/compile';
-import {ensureUnreachable} from '..';
+import {ensureUnreachable} from '../../../dist';
 import * as path from 'path';
 import {print} from '../testing/helpers';
 import {printAndExit} from '../testing/helpers';

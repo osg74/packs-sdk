@@ -1,22 +1,22 @@
-import type {Authentication} from '../types';
+import type {Authentication} from '../../../types';
 import type {AuthenticationMetadata} from '../compiled_types';
-import {AuthenticationType} from '../types';
-import type {Format} from '../types';
-import type {Formula} from '../api';
-import type {GenericSyncTable} from '../api';
-import type {MetadataFormula} from '../api';
-import type {MetadataFormulaMetadata} from '../api';
-import type {PackDefinition} from '../types';
+import {AuthenticationType} from '../../../types';
+import type {Format} from '../../../types';
+import type {Formula} from '../../../api';
+import type {GenericSyncTable} from '../../../api';
+import type {MetadataFormula} from '../../../api';
+import type {MetadataFormulaMetadata} from '../../../api';
+import type {PackDefinition} from '../../../types';
 import type {PackFormatMetadata} from '../compiled_types';
-import type {PackFormulaMetadata} from '../api';
+import type {PackFormulaMetadata} from '../../../api';
 import type {PackMetadata} from '../compiled_types';
 import type {PackSyncTable} from '../compiled_types';
-import type {PackVersionDefinition} from '../types';
+import type {PackVersionDefinition} from '../../../types';
 import type {PackVersionMetadata} from '../compiled_types';
-import type {PostSetup} from '../types';
+import type {PostSetup} from '../../../types';
 import type {PostSetupMetadata} from '../compiled_types';
-import type {TypedPackFormula} from '../api';
-import {isDynamicSyncTable} from '../api';
+import type {TypedPackFormula} from '../../../api';
+import {isDynamicSyncTable} from '../../../api';
 
 // Legacy metadata compilation kept around until we migrate first-party packs.
 export function compilePackMetadata(manifest: PackDefinition): PackMetadata;
