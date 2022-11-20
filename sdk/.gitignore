@@ -18,9 +18,3 @@ artifacts
 dist
 local-docs
 site
-
-# IDE config
-.vscode
-
-# OS files
-.DS_Store
