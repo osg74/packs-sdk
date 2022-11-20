@@ -1,15 +1,26 @@
-.coda
-.coda.json
-.DS_Store
-.vscode
+# Local dev env
+.cache
+.coda*
+.devcontainer
+.npmrc
 node_modules
-artifacts
-dist/test
+
+# Yarn caches and files
 yarn-error.log
+.yarn/*
+## keep these though
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+
+# Generated files
+artifacts
+dist
 local-docs
 site
-.coda-pack.json
-.coda-credentials.json
-.npmrc
-.devcontainer
-.cache
+
+# IDE config
+.vscode
+
+# OS files
+.DS_Store
