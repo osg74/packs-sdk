@@ -1,11 +1,11 @@
 import {testHelper} from './test_helper';
-import {getIvm} from '../testing/ivm_wrapper';
-import {getThunkPath} from '../runtime/bootstrap';
-import {injectLogFunction} from '../runtime/bootstrap';
-import {injectSerializer} from '../runtime/bootstrap';
-import {marshalValue} from '../runtime/common/marshaling';
-import {registerBundle} from '../runtime/bootstrap';
-import {tryGetIvm} from '../testing/ivm_wrapper';
+import {getIvm} from '../src/testing/ivm_wrapper';
+import {getThunkPath} from '../src/runtime/bootstrap';
+import {injectLogFunction} from '../src/runtime/bootstrap';
+import {injectSerializer} from '../src/runtime/bootstrap';
+import {marshalValue} from '../src/runtime/common/marshaling';
+import {registerBundle} from '../src/runtime/bootstrap';
+import {tryGetIvm} from '../src/testing/ivm_wrapper';
 
 const describeVmOnly = tryGetIvm() ? describe : describe.skip;
 

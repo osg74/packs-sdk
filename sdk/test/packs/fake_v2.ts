@@ -1,4 +1,4 @@
-import * as coda from '../..';
+import * as coda from '../../../dist';
 import path from 'path';
 
 export const pack = coda.newPack();

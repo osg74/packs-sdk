@@ -1,11 +1,11 @@
-import {DEFAULT_API_ENDPOINT} from '../cli/config_storage';
-import {getApiKey} from '../cli/config_storage';
-import {getPackId} from '../cli/config_storage';
+import {DEFAULT_API_ENDPOINT} from '../src/cli/config_storage';
+import {getApiKey} from '../src/cli/config_storage';
+import {getPackId} from '../src/cli/config_storage';
 import mockFs from 'mock-fs';
 import * as path from 'path';
 import sinon from 'sinon';
-import {storeCodaApiKey} from '../cli/config_storage';
-import {storePackId} from '../cli/config_storage';
+import {storeCodaApiKey} from '../src/cli/config_storage';
+import {storePackId} from '../src/cli/config_storage';
 
 const PROJECT_DIR = '/myproject';
 

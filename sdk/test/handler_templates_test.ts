@@ -1,9 +1,9 @@
 import './test_helper';
-import {ValueType} from '../schema';
-import {generateObjectResponseHandler} from '../handler_templates';
-import {generateRequestHandler} from '../handler_templates';
-import {makeStringParameter} from '../api';
-import {untransformBody} from '../handler_templates';
+import {ValueType} from '../src/schema';
+import {generateObjectResponseHandler} from '../../handler_templates';
+import {generateRequestHandler} from '../../handler_templates';
+import {makeStringParameter} from '../../api';
+import {untransformBody} from '../../handler_templates';
 
 describe('handler templates', () => {
   describe('generateRequestHandler', () => {

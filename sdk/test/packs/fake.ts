@@ -1,16 +1,16 @@
-import type {PackDefinition} from '../../types';
-import {ValueType} from '../../schema';
+import type {PackDefinition} from '../../../types';
+import {ValueType} from '../../src/schema';
 import {createFakePack} from '../test_utils';
-import {makeFormula} from '../../api';
-import {makeNumericFormula} from '../../api';
-import {makeNumericParameter} from '../../api';
-import {makeObjectFormula} from '../../api';
-import {makeObjectSchema} from '../../schema';
-import {makeStringFormula} from '../../api';
-import {makeStringParameter} from '../../api';
-import {makeSyncTable} from '../../api';
+import {makeFormula} from '../../../api';
+import {makeNumericFormula} from '../../../api';
+import {makeNumericParameter} from '../../../api';
+import {makeObjectFormula} from '../../../api';
+import {makeObjectSchema} from '../../src/schema';
+import {makeStringFormula} from '../../../api';
+import {makeStringParameter} from '../../../api';
+import {makeSyncTable} from '../../../api';
 import {v4} from 'uuid';
-import {withQueryParams} from '../../helpers/url';
+import {withQueryParams} from '../../src/helpers/url';
 
 const fakePersonSchema = makeObjectSchema({
   type: ValueType.Object,

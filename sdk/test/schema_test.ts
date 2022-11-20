@@ -1,9 +1,9 @@
-import {ValueHintType} from '../index';
-import {ValueType} from '../index';
-import {deepCopy} from '../helpers/object_utils';
-import {makeObjectSchema} from '../index';
-import {makeSchema} from '../index';
-import * as schema from '../schema';
+import {ValueHintType} from '../../index';
+import {ValueType} from '../../index';
+import {deepCopy} from '../src/helpers/object_utils';
+import {makeObjectSchema} from '../../index';
+import {makeSchema} from '../../index';
+import * as schema from '../src/schema';
 
 describe('Schema', () => {
   describe('generateSchema', () => {

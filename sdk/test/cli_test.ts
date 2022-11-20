@@ -1,8 +1,8 @@
-import type {PackVersionDefinition} from '../types';
-import {PublicApiType} from '../helpers/external-api/v1';
-import {compilePackMetadata} from '../helpers/metadata';
-import {formatWhoami} from '../cli/whoami';
-import {parsePackIdOrUrl} from '../cli/link';
+import type {PackVersionDefinition} from '../../types';
+import {PublicApiType} from '../src/helpers/external-api/v1';
+import {compilePackMetadata} from '../src/helpers/metadata';
+import {formatWhoami} from '../src/cli/whoami';
+import {parsePackIdOrUrl} from '../src/cli/link';
 
 describe('CLI', () => {
   describe('compile pack metadata', () => {

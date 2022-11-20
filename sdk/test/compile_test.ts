@@ -1,8 +1,8 @@
-import {compilePackBundle} from '../testing/compile';
-import {executeFormulaOrSyncWithVM} from '../testing/execution';
-import {newMockSyncExecutionContext} from '../testing/mocks';
+import {compilePackBundle} from '../src/testing/compile';
+import {executeFormulaOrSyncWithVM} from '../src/testing/execution';
+import {newMockSyncExecutionContext} from '../src/testing/mocks';
 import path from 'path';
-import {translateErrorStackFromVM} from '../runtime/common/source_map';
+import {translateErrorStackFromVM} from '../src/runtime/common/source_map';
 
 describe('compile', () => {
   it('works with source map', async () => {

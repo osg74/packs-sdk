@@ -1,21 +1,21 @@
 import './test_helper';
-import {AuthenticationType} from '../types';
-import {ConnectionRequirement} from '../api_types';
-import type {DynamicSyncTableDef} from '../api';
-import type {MetadataFormulaDef} from '../api';
-import type {PackDefinitionBuilder} from '../builder';
-import type {ParamDefs} from '../api_types';
-import {ParameterType} from '../api_types';
-import {PostSetupType} from '..';
-import type {StringPackFormula} from '../api';
-import {ValueHintType} from '..';
-import {ValueType} from '../schema';
-import {assertCondition} from '..';
-import {makeMetadataFormula} from '../api';
-import {makeObjectSchema} from '../schema';
-import {makeParameter} from '../api';
-import {makeSchema} from '../schema';
-import {newPack} from '../builder';
+import {AuthenticationType} from '../../types';
+import {ConnectionRequirement} from '../src/api_types';
+import type {DynamicSyncTableDef} from '../../api';
+import type {MetadataFormulaDef} from '../../api';
+import type {PackDefinitionBuilder} from '../../builder';
+import type {ParamDefs} from '../src/api_types';
+import {ParameterType} from '../src/api_types';
+import {PostSetupType} from '../../dist';
+import type {StringPackFormula} from '../../api';
+import {ValueHintType} from '../../dist';
+import {ValueType} from '../src/schema';
+import {assertCondition} from '../../dist';
+import {makeMetadataFormula} from '../../api';
+import {makeObjectSchema} from '../src/schema';
+import {makeParameter} from '../../api';
+import {makeSchema} from '../src/schema';
+import {newPack} from '../../builder';
 
 describe('Builder', () => {
   let pack: PackDefinitionBuilder;

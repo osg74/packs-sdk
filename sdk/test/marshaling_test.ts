@@ -1,13 +1,13 @@
-import {MissingScopesError} from '../api';
-import {StatusCodeError} from '../api';
-import {getIvm} from '../testing/ivm_wrapper';
+import {MissingScopesError} from '../../api';
+import {StatusCodeError} from '../../api';
+import {getIvm} from '../src/testing/ivm_wrapper';
 import {inspect} from 'util';
-import {marshalValue} from '../runtime/common/marshaling';
-import {marshalValuesForLogging} from '../runtime/common/marshaling';
-import {tryGetIvm} from '../testing/ivm_wrapper';
-import {unmarshalValue} from '../runtime/common/marshaling';
-import {unwrapError} from '../runtime/common/marshaling';
-import {wrapError} from '../runtime/common/marshaling';
+import {marshalValue} from '../src/runtime/common/marshaling';
+import {marshalValuesForLogging} from '../src/runtime/common/marshaling';
+import {tryGetIvm} from '../src/testing/ivm_wrapper';
+import {unmarshalValue} from '../src/runtime/common/marshaling';
+import {unwrapError} from '../src/runtime/common/marshaling';
+import {wrapError} from '../src/runtime/common/marshaling';
 
 describe('Marshaling', () => {
   const describeVmOnly = tryGetIvm() ? describe : describe.skip;

@@ -1,28 +1,28 @@
 import {testHelper} from './test_helper';
-import {AuthenticationType} from '../types';
-import type {Formula} from '../api';
-import type {ResponseHandlerTemplate} from '../handler_templates';
-import type {Schema} from '../schema';
-import {TimerShimStrategy} from '../testing/compile';
-import {ValueType} from '../schema';
-import {assertCondition} from '../helpers/ensure';
-import {build as buildBundle} from '../cli/build';
+import {AuthenticationType} from '../../types';
+import type {Formula} from '../../api';
+import type {ResponseHandlerTemplate} from '../../handler_templates';
+import type {Schema} from '../src/schema';
+import {TimerShimStrategy} from '../src/testing/compile';
+import {ValueType} from '../src/schema';
+import {assertCondition} from '../src/helpers/ensure';
+import {build as buildBundle} from '../src/cli/build';
 import {createFakePack} from './test_utils';
-import {executeFormulaFromPackDef} from '../testing/execution';
-import {executeFormulaOrSyncWithVM} from '../testing/execution';
-import {executeMetadataFormula} from '../testing/execution';
-import {executeSyncFormulaFromPackDef} from '../testing/execution';
+import {executeFormulaFromPackDef} from '../src/testing/execution';
+import {executeFormulaOrSyncWithVM} from '../src/testing/execution';
+import {executeMetadataFormula} from '../src/testing/execution';
+import {executeSyncFormulaFromPackDef} from '../src/testing/execution';
 import {manifest as fakePack} from './packs/fake';
-import {makeBooleanParameter} from '../api';
-import {makeMetadataFormula} from '../api';
-import {makeNumericFormula} from '../api';
-import {makeObjectFormula} from '../api';
-import {makeObjectSchema} from '../schema';
-import {makeSimpleAutocompleteMetadataFormula} from '../api';
-import {makeStringFormula} from '../api';
-import {makeStringParameter} from '../api';
-import {newJsonFetchResponse} from '../testing/mocks';
-import {newMockExecutionContext} from '../testing/mocks';
+import {makeBooleanParameter} from '../../api';
+import {makeMetadataFormula} from '../../api';
+import {makeNumericFormula} from '../../api';
+import {makeObjectFormula} from '../../api';
+import {makeObjectSchema} from '../src/schema';
+import {makeSimpleAutocompleteMetadataFormula} from '../../api';
+import {makeStringFormula} from '../../api';
+import {makeStringParameter} from '../../api';
+import {newJsonFetchResponse} from '../src/testing/mocks';
+import {newMockExecutionContext} from '../src/testing/mocks';
 import sinon from 'sinon';
 
 describe('Execution', () => {
@@ -44,10 +44,10 @@ describe('Execution', () => {
 
   it('executes a formula without normalization', async () => {
     const result = await executeFormulaFromPackDef(
-      fakePack, 
-      'Person', 
-      ['Alice'], 
-      undefined, 
+      fakePack,
+      'Person',
+      ['Alice'],
+      undefined,
       {useDeprecatedResultNormalization: false});
     assert.deepEqual(result, {name: 'Alice'});
   });
@@ -59,10 +59,10 @@ describe('Execution', () => {
 
   it('executed a sync formulas without normalization', async () => {
     const result = await executeSyncFormulaFromPackDef(
-      fakePack, 
-      'Students', 
-      ['Smith'], 
-      undefined, 
+      fakePack,
+      'Students',
+      ['Smith'],
+      undefined,
       {validateParams: true, validateResult: true, useDeprecatedResultNormalization: false});
     assert.deepEqual(result, [{name: 'Alice'}, {name: 'Bob'}, {name: 'Chris'}, {name: 'Diana'}]);
   });

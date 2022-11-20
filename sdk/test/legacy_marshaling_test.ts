@@ -1,8 +1,8 @@
-import {MissingScopesError} from '../api';
-import {StatusCodeError} from '../api';
+import {MissingScopesError} from '../../api';
+import {StatusCodeError} from '../../api';
 import {inspect} from 'util';
-import {legacyMarshalValue} from '../helpers/legacy_marshal';
-import {legacyUnmarshalValue} from '../helpers/legacy_marshal';
+import {legacyMarshalValue} from '../src/helpers/legacy_marshal';
+import {legacyUnmarshalValue} from '../src/helpers/legacy_marshal';
 
 describe('Legacy marshaling', () => {
   function transform<T>(val: T): T {

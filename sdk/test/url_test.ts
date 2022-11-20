@@ -1,4 +1,4 @@
-import {join} from '../helpers/url';
+import {join} from '../src/helpers/url';
 
 describe('url helpers test', () => {
   it('handles null entry', () => {

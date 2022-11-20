@@ -1,17 +1,17 @@
 import './test_helper';
-import type {ArrayType} from '../api_types';
-import {ConnectionRequirement} from '../api_types';
-import {ParameterType} from '../api_types';
-import {StatusCodeError} from '../api';
-import type {Type} from '../api_types';
-import {ValueType} from '../schema';
-import {makeDynamicSyncTable} from '../api';
-import {makeFormula} from '../api';
-import {makeMetadataFormula} from '../api';
-import {makeParameter} from '../api';
-import {makeStringParameter} from '../api';
-import {makeSyncTable} from '../api';
-import * as schema from '../schema';
+import type {ArrayType} from '../src/api_types';
+import {ConnectionRequirement} from '../src/api_types';
+import {ParameterType} from '../src/api_types';
+import {StatusCodeError} from '../../api';
+import type {Type} from '../src/api_types';
+import {ValueType} from '../src/schema';
+import {makeDynamicSyncTable} from '../../api';
+import {makeFormula} from '../../api';
+import {makeMetadataFormula} from '../../api';
+import {makeParameter} from '../../api';
+import {makeStringParameter} from '../../api';
+import {makeSyncTable} from '../../api';
+import * as schema from '../src/schema';
 
 describe('API test', () => {
   describe('makeDynamicSyncTable', () => {

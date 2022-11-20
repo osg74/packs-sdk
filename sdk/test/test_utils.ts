@@ -1,11 +1,11 @@
-import {AuthenticationType} from '../types';
-import {PackCategory} from '../types';
-import type {PackDefinition} from '../types';
-import type {PackFormulaMetadata} from '../api';
-import type {PackVersionMetadata} from '../compiled_types';
-import {Type} from '../index';
-import {ValueType} from '../index';
-import {deepFreeze} from '../helpers/object_utils';
+import {AuthenticationType} from '../../types';
+import {PackCategory} from '../../types';
+import type {PackDefinition} from '../../types';
+import type {PackFormulaMetadata} from '../../api';
+import type {PackVersionMetadata} from '../src/compiled_types';
+import {Type} from '../../index';
+import {ValueType} from '../../index';
+import {deepFreeze} from '../src/helpers/object_utils';
 
 const BaseFakePack = {
   version: '42.42.42',

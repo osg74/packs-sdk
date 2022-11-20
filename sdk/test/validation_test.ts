@@ -1,22 +1,22 @@
 import {testHelper} from './test_helper';
-import type { BaseStringSchema} from '../schema';
+import type { BaseStringSchema} from '../src/schema';
 import {FakePack} from './test_utils';
-import type {ParamDefs} from '../api_types';
-import {ScaleIconSet} from '../schema';
-import {ValueHintType} from '../schema';
-import {ValueType} from '../schema';
-import {coerceParams} from '../testing/coercion';
+import type {ParamDefs} from '../src/api_types';
+import {ScaleIconSet} from '../src/schema';
+import {ValueHintType} from '../src/schema';
+import {ValueType} from '../src/schema';
+import {coerceParams} from '../src/testing/coercion';
 import {createFakePack} from './test_utils';
-import {executeFormulaFromPackDef} from '../testing/execution';
-import {executeSyncFormulaFromPackDef} from '../testing/execution';
-import {makeBooleanParameter} from '../api';
-import {makeNumericParameter} from '../api';
-import {makeObjectFormula} from '../api';
-import {makeObjectSchema} from '../schema';
-import {makeStringArrayParameter} from '../api';
-import {makeStringFormula} from '../api';
-import {makeStringParameter} from '../api';
-import {makeSyncTable} from '../api';
+import {executeFormulaFromPackDef} from '../src/testing/execution';
+import {executeSyncFormulaFromPackDef} from '../src/testing/execution';
+import {makeBooleanParameter} from '../../api';
+import {makeNumericParameter} from '../../api';
+import {makeObjectFormula} from '../../api';
+import {makeObjectSchema} from '../src/schema';
+import {makeStringArrayParameter} from '../../api';
+import {makeStringFormula} from '../../api';
+import {makeStringParameter} from '../../api';
+import {makeSyncTable} from '../../api';
 
 describe('Property validation in objects', () => {
   const fakeSchema = makeObjectSchema({
