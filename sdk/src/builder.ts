@@ -22,7 +22,7 @@ import {makeDynamicSyncTable} from './api';
 import {makeFormula} from './api';
 import {makeSyncTable} from './api';
 import {maybeRewriteConnectionForFormula} from './api';
-import {setEndpointDefHelper} from './helpers/migration';
+import {setEndpointDefHelper} from './sdk/src/helpers/migration';
 import {wrapMetadataFunction} from './api';
 
 /**

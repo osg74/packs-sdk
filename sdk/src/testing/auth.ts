@@ -1,11 +1,11 @@
 import type {AWSAccessKeyCredentials} from './auth_types';
 import type {AWSAssumeRoleCredentials} from './auth_types';
-import type {Authentication} from '../types';
-import {AuthenticationType} from '../types';
-import type {BasicPackDefinition} from '../types';
+import type {Authentication} from '../../../types';
+import {AuthenticationType} from '../../../types';
+import type {BasicPackDefinition} from '../../../types';
 import type {Credentials} from './auth_types';
 import type {CredentialsFile} from './auth_types';
-import type {CustomAuthParameter} from '../types';
+import type {CustomAuthParameter} from '../../../types';
 import type {CustomCredentials} from './auth_types';
 import type {MultiQueryParamCredentials} from './auth_types';
 import type {OAuth2Credentials} from './auth_types';

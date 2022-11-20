@@ -60,18 +60,18 @@ export type {ExternalPackMetadata} from './compiled_types';
 export type {ExternalPackVersionMetadata} from './compiled_types';
 
 // Formula related interfaces
-export type {ArrayType} from './api_types';
-export {ConnectionRequirement} from './api_types';
+export type {ArrayType} from './sdk/src/api_types';
+export {ConnectionRequirement} from './sdk/src/api_types';
 export type {Continuation} from './api';
-export type {SuggestedValueType} from './api_types';
+export type {SuggestedValueType} from './sdk/src/api_types';
 export type {DynamicOptions} from './api';
 export type {DynamicSyncTableDef} from './api';
 export type {EmptyFormulaDef} from './api';
-export type {ExecutionContext} from './api_types';
-export type {Fetcher} from './api_types';
-export type {FetchMethodType} from './api_types';
-export type {FetchRequest} from './api_types';
-export type {FetchResponse} from './api_types';
+export type {ExecutionContext} from './sdk/src/api_types';
+export type {Fetcher} from './sdk/src/api_types';
+export type {FetchMethodType} from './sdk/src/api_types';
+export type {FetchRequest} from './sdk/src/api_types';
+export type {FetchResponse} from './sdk/src/api_types';
 export type {FormulaDefinition} from './api';
 export type {GenericDynamicSyncTable} from './api';
 export type {GenericSyncFormula} from './api';
@@ -80,34 +80,34 @@ export type {GenericSyncTable} from './api';
 export type {GenericSyncUpdate} from './api';
 export type {GenericSyncUpdateResult} from './api';
 export type {GenericSyncUpdateSingleResult} from './api';
-export type {InvocationLocation} from './api_types';
+export type {InvocationLocation} from './sdk/src/api_types';
 export type {MetadataContext} from './api';
 export type {MetadataFormulaObjectResultType} from './api';
 export type {MetadataFormulaResultType} from './api';
 export type {MetadataFormula} from './api';
 export type {MetadataFunction} from './api';
-export type {Network} from './api_types';
-export {NetworkConnection} from './api_types';
+export type {Network} from './sdk/src/api_types';
+export {NetworkConnection} from './sdk/src/api_types';
 export type {PackFormulaDef} from './api';
 export type {PackFormulaMetadata} from './api';
-export type {PackFormulaValue} from './api_types';
-export type {PackFormulaResult} from './api_types';
-export type {ParamDef} from './api_types';
-export type {ParamDefs} from './api_types';
-export type {ParamValues} from './api_types';
+export type {PackFormulaValue} from './sdk/src/api_types';
+export type {PackFormulaResult} from './sdk/src/api_types';
+export type {ParamDef} from './sdk/src/api_types';
+export type {ParamDefs} from './sdk/src/api_types';
+export type {ParamValues} from './sdk/src/api_types';
 export type {ParameterOptions} from './api';
-export {ParameterType} from './api_types';
-export type {ParamsList} from './api_types';
-export {PrecannedDateRange} from './api_types';
+export {ParameterType} from './sdk/src/api_types';
+export type {ParamsList} from './sdk/src/api_types';
+export {PrecannedDateRange} from './sdk/src/api_types';
 export {StatusCodeError} from './api';
 export {MissingScopesError} from './api';
 export type {StatusCodeErrorResponse} from './api';
-export type {SyncExecutionContext} from './api_types';
+export type {SyncExecutionContext} from './sdk/src/api_types';
 export type {SyncFormulaResult} from './api';
 export type {SyncTableDef} from './api';
 export type {SyncTableOptions} from './api';
-export type {TemporaryBlobStorage} from './api_types';
-export {Type} from './api_types';
+export type {TemporaryBlobStorage} from './sdk/src/api_types';
+export {Type} from './sdk/src/api_types';
 export type {TypedPackFormula} from './api';
 export type {Formula} from './api';
 export {UserVisibleError} from './api';
@@ -128,21 +128,21 @@ export {makeSimpleAutocompleteMetadataFormula} from './api';
 export {simpleAutocomplete} from './api';
 
 // URL helpers.
-export {getQueryParams} from './helpers/url';
-export {join as joinUrl} from './helpers/url';
-export {withQueryParams} from './helpers/url';
+export {getQueryParams} from './sdk/src/helpers/url';
+export {join as joinUrl} from './sdk/src/helpers/url';
+export {withQueryParams} from './sdk/src/helpers/url';
 
 // Schema helpers.
-export {getEffectivePropertyKeysFromSchema} from './helpers/schema';
+export {getEffectivePropertyKeysFromSchema} from './sdk/src/helpers/schema';
 
 // SVG constants.
-export {SvgConstants} from './helpers/svg';
+export {SvgConstants} from './sdk/src/helpers/svg';
 
 // General Utilities
-export {assertCondition} from './helpers/ensure';
-export {ensureExists} from './helpers/ensure';
-export {ensureNonEmptyString} from './helpers/ensure';
-export {ensureUnreachable} from './helpers/ensure';
+export {assertCondition} from './sdk/src/helpers/ensure';
+export {ensureExists} from './sdk/src/helpers/ensure';
+export {ensureNonEmptyString} from './sdk/src/helpers/ensure';
+export {ensureUnreachable} from './sdk/src/helpers/ensure';
 
 // Object Schemas
 export type {ArraySchema} from './schema';
@@ -203,7 +203,7 @@ export {withIdentity} from './schema';
 // Exports for intermediate entities we want included in the TypeDoc documentation
 // but otherwise wouldn't care about including as top-level exports of the SDK
 
-export {ValidFetchMethods} from './api_types';
+export {ValidFetchMethods} from './sdk/src/api_types';
 
 export type {ArrayFormulaDef} from './api';
 export type {BaseFormula} from './api';
@@ -226,7 +226,7 @@ export {SyncTable} from './api';
 
 export {SetEndpoint} from './types';
 export {SetEndpointDef} from './types';
-export {Sync} from './api_types';
+export {Sync} from './sdk/src/api_types';
 export {SystemAuthenticationDef} from './types';
 
 export type {BooleanHintTypes} from './schema';
@@ -238,5 +238,5 @@ export type {StringHintTypes} from './schema';
 export type {RequestHandlerTemplate} from './handler_templates';
 export type {ResponseHandlerTemplate} from './handler_templates';
 
-export type {OptionalParamDef} from './api_types';
+export type {OptionalParamDef} from './sdk/src/api_types';
 export type {ParamDefFromOptionsUnion} from './api';

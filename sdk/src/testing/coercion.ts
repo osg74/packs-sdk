@@ -4,7 +4,7 @@ import type {ParamDefs} from '../api_types';
 import type {ParamType} from '../api_types';
 import type {ParamValues} from '../api_types';
 import {Type} from '../api_types';
-import type {TypedPackFormula} from '../api';
+import type {TypedPackFormula} from '../../../api';
 import {ensureUnreachable} from '../helpers/ensure';
 import {isArrayType} from '../api_types';
 import {isDefined} from '../helpers/object_utils';

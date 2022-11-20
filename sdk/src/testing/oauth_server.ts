@@ -1,6 +1,6 @@
 import 'cross-fetch/polyfill';
 import {HttpStatusCode} from './constants';
-import type {OAuth2Authentication} from '../types';
+import type {OAuth2Authentication} from '../../../types';
 import {exec} from 'child_process';
 import express from 'express';
 import {getExpirationDate} from './helpers';

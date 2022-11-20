@@ -1,4 +1,4 @@
-import type {ExecutionContext} from '../api';
+import type {ExecutionContext} from '../../../api';
 import type {Context as IVMContext} from 'isolated-vm';
 import {build as buildBundle} from '../cli/build';
 import {createIsolateContext} from '../runtime/bootstrap';

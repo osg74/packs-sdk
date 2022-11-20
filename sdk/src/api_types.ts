@@ -1,4 +1,4 @@
-import type {$Values} from './type_utils';
+import type {$Values} from '../../type_utils';
 import type {ArraySchema} from './schema';
 import type {Continuation} from './api';
 import type {MetadataFormula} from './api';

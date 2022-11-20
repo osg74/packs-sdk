@@ -1,4 +1,4 @@
-import type {PackVersionDefinition} from '../types';
+import type {PackVersionDefinition} from '../../../types';
 import {ensureNonEmptyString} from '../helpers/ensure';
 import fs from 'fs';
 import path from 'path';

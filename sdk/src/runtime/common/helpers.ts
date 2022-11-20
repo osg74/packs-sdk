@@ -1,6 +1,6 @@
-import type {BasicPackDefinition} from '../../types';
-import type {Formula} from '../../api';
-import type {GenericSyncFormula} from '../../api';
+import type {BasicPackDefinition} from '../../../../types';
+import type {Formula} from '../../../../api';
+import type {GenericSyncFormula} from '../../../../api';
 
 export function findFormula(packDef: BasicPackDefinition, formulaNameWithNamespace: string): Formula {
   const packFormulas = packDef.formulas;

@@ -1,4 +1,4 @@
-import type {$Values} from './type_utils';
+import type {$Values} from '../../type_utils';
 import {assertCondition} from './helpers/ensure';
 import {deepCopy} from './helpers/object_utils';
 import {ensureExists} from './helpers/ensure';
