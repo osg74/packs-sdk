@@ -2,8 +2,10 @@
   "name": "@codahq/packs-sdk",
   "version": "1.2.3",
   "license": "MIT",
+  "packageManager": "pnpm@7.26.3",
   "engines": {
-    "node": ">=14.17.x"
+    "node": ">=14.17.x",
+    "pnpm": ">=7.26.3"
   },
   "main": "dist/index.js",
   "bin": {
@@ -118,17 +120,19 @@
     "typedoc": "^0.23.10",
     "typedoc-plugin-markdown": "^3.14.0"
   },
-  "resolutions": {
-    "**/request/qs": "^6.5.3",
-    "release-it/node-fetch": "^3.2.10",
-    "ansi-regex": "^5.0.1",
-    "got": "^12.1.0",
-    "jsprim": "^2.0.2",
-    "parse-path": "^5.0.0",
-    "parse-url": "^8.1.0",
-    "marked": "^4.0.10",
-    "minimist": "^1.2.6",
-    "nanoid": "^3.1.31"
+  "pnpm": {
+    "overrides": {
+      "request>qs": "^6.5.3",
+      "release-it>node-fetch": "^3.2.10",
+      "ansi-regex": "^5.0.1",
+      "got": "^12.1.0",
+      "jsprim": "^2.0.2",
+      "parse-path": "^5.0.0",
+      "parse-url": "^8.1.0",
+      "marked": "^4.0.10",
+      "minimist": "^1.2.6",
+      "nanoid": "^3.1.31"
+    }
   },
   "remarkConfig": {
     "plugins": [
