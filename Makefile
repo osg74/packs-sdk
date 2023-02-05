@@ -81,7 +81,7 @@ bootstrap:
 
 .PHONY: lint
 lint:
-	find . -name "*.ts" | grep -v /dist/ | grep -v /node_modules/ | grep -v "\.d\.ts" | xargs ${ROOTDIR}/node_modules/.bin/eslint
+	find . -name "*.ts" | grep -v /dist/ | grep -v /node_modules/ | grep -v "\.d\.ts" | xargs pnpm eslint
 
 	# Markdown lint.
 	npx remark docs --quiet --frail --ignore-pattern 'docs/reference/*'
@@ -101,7 +101,7 @@ lint:
 
 .PHONY: lint-fix
 lint-fix:
-	find . -name "*.ts" | grep -v /dist/ | grep -v /node_modules/ | grep -v .d.ts | xargs ${ROOTDIR}/node_modules/.bin/eslint --fix
+	find . -name "*.ts" | grep -v /dist/ | grep -v /node_modules/ | grep -v .d.ts | xargs pnpm eslint --fix
 
 .PHONY: do-compile-isolated-vm
 do-compile-isolated-vm:
@@ -130,7 +130,7 @@ compile-thunk:
 	# This bundle is loaded into ivm, better to use iife to avoid local symbols leak to global.
 	# We need the NODE_DEBUG=false because "util.format" depends on debuglog which depends
 	# on the value of NODE_DEBUG (https://github.com/nodejs/node/blob/6b055f385744d2ca71c19d46a0ec3bcfc51f5cd3/lib/internal/util/debuglog.js#L21)
-	${ROOTDIR}/node_modules/.bin/esbuild ${ROOTDIR}/runtime/thunk/thunk.ts \
+	pnpm esbuild ${ROOTDIR}/runtime/thunk/thunk.ts \
 		--bundle \
 		--outfile=${ROOTDIR}/bundles/thunk_bundle.js \
 		--inject:${ROOTDIR}/testing/injections/buffer_shim.js \
@@ -143,8 +143,8 @@ compile-thunk:
 
 .PHONY: compile-ts
 compile-ts:
-	echo "Compiling Typescript... if this fails to build isolated-vm, you may need to install plain python (python 2 was removed in MacOS Monterey 12.3)";
-	${ROOTDIR}/node_modules/.bin/tsc
+	echo "Compiling Typescript...";
+	pnpm tsc
 
 	$(MAKE) compile-thunk
 	$(MAKE) compile-documentation-scripts
@@ -163,7 +163,7 @@ compile-ts:
 	#
 	# We need the NODE_DEBUG=false because "util.format" depends on debuglog which depends
 	# on the value of NODE_DEBUG (https://github.com/nodejs/node/blob/6b055f385744d2ca71c19d46a0ec3bcfc51f5cd3/lib/internal/util/debuglog.js#L21)
-	${ROOTDIR}/node_modules/.bin/esbuild ${ROOTDIR}/index.ts \
+	pnpm esbuild ${ROOTDIR}/index.ts \
 		--bundle \
 		--outfile=${ROOTDIR}/dist/bundle.js \
 		--format=cjs \
@@ -179,7 +179,7 @@ compile:
 
 	# Generate a typescript file for use in /experimental so the web editor
 	# can resolve packs-sdk imports
-	${ROOTDIR}/node_modules/.bin/dts-bundle-generator ${ROOTDIR}/index.ts \
+	pnpm dts-bundle-generator ${ROOTDIR}/index.ts \
   	-o ${ROOTDIR}/dist/bundle.d.ts \
 		--no-banner
 	# Generate isolated-vm binaries that's compatible to Amazon Linux 2.
@@ -189,11 +189,11 @@ compile:
 
 .PHONY: compile-documentation-scripts
 compile-documentation-scripts:
-	${ROOTDIR}/node_modules/.bin/tsc --project tsconfig.scripts.json
+	pnpm tsc --project tsconfig.scripts.json
 
 .PHONY: compile-samples
 compile-samples:
-	${ROOTDIR}/node_modules/.bin/tsc --project ./documentation/samples/tsconfig.json
+	pnpm tsc --project ./documentation/samples/tsconfig.json
 
 .PHONY: validate-samples
 validate-samples:
@@ -211,7 +211,7 @@ generated-documentation: compile-samples
 typedoc:
 	# Most options loaded from typedoc.js.
 	# If you changes this, also update the similar command in typedoc_coverage_test.ts.
-	${ROOTDIR}/node_modules/.bin/typedoc index.ts development.ts --options typedoc.js --disableSources "${DOC_DISABLE_SOURCES}" --gitRevision "${DOC_GIT_REVISION}" --out ${ROOTDIR}/docs/reference/sdk
+	pnpm typedoc index.ts development.ts --options typedoc.js --disableSources "${DOC_DISABLE_SOURCES}" --gitRevision "${DOC_GIT_REVISION}" --out ${ROOTDIR}/docs/reference/sdk
 	node -r ts-node/register documentation/scripts/typedoc_post_process.ts
 
 .PHONY: docs
@@ -250,19 +250,19 @@ build-mkdocs:
 # make publish-docs-<env> FLAGS=--forceUpload
 .PHONY: publish-docs-adhoc
 publish-docs-adhoc:
-	(cd ${ROOTDIR}; ./node_modules/.bin/ts-node documentation/scripts/documentation_publisher.ts push adhoc ${FLAGS})
+	(cd ${ROOTDIR}; pnpm ts-node documentation/scripts/documentation_publisher.ts push adhoc ${FLAGS})
 
 .PHONY: publish-docs-head
 publish-docs-head:
-	(cd ${ROOTDIR}; ./node_modules/.bin/ts-node documentation/scripts/documentation_publisher.ts push head ${FLAGS})
+	(cd ${ROOTDIR}; pnpm ts-node documentation/scripts/documentation_publisher.ts push head ${FLAGS})
 
 .PHONY: publish-docs-staging
 publish-docs-staging:
-	(cd ${ROOTDIR}; ./node_modules/.bin/ts-node documentation/scripts/documentation_publisher.ts push staging ${FLAGS})
+	(cd ${ROOTDIR}; pnpm ts-node documentation/scripts/documentation_publisher.ts push staging ${FLAGS})
 
 .PHONY: publish-docs-prod
 publish-docs-prod:
-	(cd ${ROOTDIR}; ./node_modules/.bin/ts-node documentation/scripts/documentation_publisher.ts push prod ${FLAGS})
+	(cd ${ROOTDIR}; pnpm ts-node documentation/scripts/documentation_publisher.ts push prod ${FLAGS})
 
 .PHONY: publish-docs-gh-pages
 publish-docs-gh-pages:
@@ -279,11 +279,11 @@ publish-docs-gh-pages:
 
 .PHONY: test
 test:
-	TS_NODE_TRANSPILE_ONLY=1 ${ROOTDIR}/node_modules/.bin/mocha test/*_test.ts
+	TS_NODE_TRANSPILE_ONLY=1 pnpm mocha test/*_test.ts
 
 .PHONY: test-file
 test-file:
-	TS_NODE_TRANSPILE_ONLY=1 ${ROOTDIR}/node_modules/.bin/mocha ${FILE}
+	TS_NODE_TRANSPILE_ONLY=1 pnpm mocha ${FILE}
 
 .PHONY: clean-githooks
 clean-githooks:
