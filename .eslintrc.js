@@ -14,7 +14,12 @@ module.exports = {
     project: ['./tsconfig.eslint.json'],
     sourceType: 'module',
   },
-  plugins: ['ban', 'filenames', 'local', '@typescript-eslint'],
+  plugins: [
+    'ban',
+    'filenames',
+    'local-rules',
+    '@typescript-eslint'
+  ],
   settings: {},
   rules: {
     '@typescript-eslint/restrict-plus-operands': 'error',
@@ -30,6 +35,8 @@ module.exports = {
         ignorePattern: '^import ',
       },
     ],
+    'local-rules/coda-import-style': 'error',
+    'local-rules/coda-import-ordering': 'error'
   },
   overrides: [
     {

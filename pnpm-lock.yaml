@@ -64,7 +64,7 @@ specifiers:
   eslint: 8.31.0
   eslint-plugin-ban: ^1.6.0
   eslint-plugin-filenames: ^1.3.2
-  eslint-plugin-local: ^1.0.0
+  eslint-plugin-local-rules: 1.3.2
   eslint-plugin-prefer-let: ^3.0.1
   exorcist: ^2.0.0
   express: 4.18.2
@@ -190,7 +190,7 @@ devDependencies:
   eslint: 8.31.0
   eslint-plugin-ban: 1.6.0
   eslint-plugin-filenames: 1.3.2_eslint@8.31.0
-  eslint-plugin-local: 1.0.0
+  eslint-plugin-local-rules: 1.3.2
   eslint-plugin-prefer-let: 3.0.1
   glob: 8.1.0
   isolated-vm: 4.4.2
@@ -3895,8 +3895,8 @@ packages:
       lodash.upperfirst: 4.3.1
     dev: true
 
-  /eslint-plugin-local/1.0.0:
-    resolution: {integrity: sha512-bcwcQnKL/Iw5Vi/F2lG1he5oKD2OGjhsLmrcctkWrWq5TujgiaYb0cj3pZgr3XI54inNVnneOFdAx1daLoYLJQ==}
+  /eslint-plugin-local-rules/1.3.2:
+    resolution: {integrity: sha512-X4ziX+cjlCYnZa+GB1ly3mmj44v2PeIld3tQVAxelY6AMrhHSjz6zsgsT6nt0+X5b7eZnvL/O7Q3pSSK2kF/+Q==}
     dev: true
 
   /eslint-plugin-prefer-let/3.0.1:

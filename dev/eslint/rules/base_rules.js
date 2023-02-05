@@ -155,10 +155,6 @@ module.exports = {
     'space-before-function-paren': 'off',
     'spaced-comment': ['error', 'always', {exceptions: ['*']}],
     'use-isnan': 'error',
-    'valid-typeof': 'off',
-
-    // ESLint coda rules
-    'local/coda-import-style': 'error',
-    'local/coda-import-ordering': 'error',
+    'valid-typeof': 'off'
   },
 };
