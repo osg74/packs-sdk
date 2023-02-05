@@ -2,6 +2,14 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "tslint.autoFixOnSave": true,
   "editor.tabSize": 2,
+  "eslint.alwaysShowStatus": true,
+  "eslint.debug": true,
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "eslint.useESLintClass": true,
+  "eslint.workingDirectories": [
+    "./"
+  ],
   "search.exclude": {
     "dist/": true
   }
