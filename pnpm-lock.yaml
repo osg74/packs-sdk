@@ -71,7 +71,7 @@ specifiers:
   fs-extra: ^11.1.0
   glob: ^8.0.3
   handlebars: ^4.7.7
-  isolated-vm: '=4.4.1 || >4.4.2'
+  isolated-vm: 4.4.2
   js-yaml: ^4.1.0
   jsonpath-plus: ^7.2.0
   mersenne-twister: ^1.1.0
@@ -146,9 +146,6 @@ dependencies:
   yn: 3.1.1
   zod: 3.20.2
 
-optionalDependencies:
-  isolated-vm: 4.4.1
-
 devDependencies:
   '@brightcove/kacl': 0.1.11
   '@getify/eslint-plugin-proper-arrows': 11.0.3_eslint@8.31.0
@@ -196,6 +193,7 @@ devDependencies:
   eslint-plugin-local: 1.0.0
   eslint-plugin-prefer-let: 3.0.1
   glob: 8.1.0
+  isolated-vm: 4.4.2
   js-yaml: 4.1.0
   mime: 3.0.0
   mocha: 10.2.0
@@ -5219,12 +5217,11 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isolated-vm/4.4.1:
-    resolution: {integrity: sha512-5aDwxQGm78vHS+qJeUli2ILroG7OS/k3D/Mc0kcT9vyujiL4bV7PYYix1mAvuBm3v44nz2qcfAOqgAbhuACc/w==}
+  /isolated-vm/4.4.2:
+    resolution: {integrity: sha512-4ObzqZWZTS3bQtavzgoCMsOxpQt3hMeenkPavx2Razig3wX3fAkXZ3XpmqXKoJu6KMl4egBI1MfSg0BnxZ/rfg==}
     engines: {node: '>=10.4.0'}
     requiresBuild: true
-    dev: false
-    optional: true
+    dev: true
 
   /isstream/0.1.2:
     resolution: {integrity: sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==}
