@@ -2,9 +2,9 @@ MAKEFLAGS = -s ${MAX_PARALLEL_MAKEFLAG}
 SHELL = /bin/bash
 ROOTDIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-### YARN
-# CircleCI yarn cache directory may also need to be updated in sync with this
-YARN_CACHE_DIR=~/.yarncache
+# CircleCI dependency cache directory may also need to be updated in sync with this
+XDG_CACHE_HOME=${HOME}/.caches
+DEPENDENCY_CACHE_DIR=${XDG_CACHE_HOME}/pnpm
 
 ISOLATED_VM_VERSION_COMMAND="require('./node_modules/isolated-vm/package.json').version"
 ISOLATED_VM_VERSION=$(shell node -p -e $(ISOLATED_VM_VERSION_COMMAND))
@@ -24,13 +24,13 @@ bs: bootstrap
 
 .PHONY: _bootstrap-node
 _bootstrap-node:
-	mkdir -p ${YARN_CACHE_DIR}
-	yarn config set cache-folder ${YARN_CACHE_DIR}
-	yarn install
+	mkdir -p ${DEPENDENCY_CACHE_DIR}
+	pnpm config set cache-dir ${DEPENDENCY_CACHE_DIR}
+	pnpm install
 	# Install a symlink of the working directory as @codahq/packs-sdk, so that the sample code compiles.
-	yarn unlink || true # Remove any existing links providing @codahq/packs-sdk
-	yarn link  # Provide @codahq/packs-sdk from this directory
-	yarn link "@codahq/packs-sdk"  # Consume the link whenever @codahq/packs-sdk is imported
+	pnpm unlink . || true # Remove any existing links providing @codahq/packs-sdk
+	pnpm link . # Provide @codahq/packs-sdk from this directory
+	pnpm link "@codahq/packs-sdk"  # Consume the link whenever @codahq/packs-sdk is imported
 
 .PHONY: _bootstrap-python
 _bootstrap-python:
