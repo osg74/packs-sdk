@@ -49,7 +49,7 @@ commands:
             - v2-dependencies-
       - run:
           name: 'Install pnpm package manager'
-          command: curl -L https://pnpm.js.org/pnpm.js | node - add pnpm@7
+          command: curl -L https://pnpm.js.org/pnpm.js | node - add pnpm@^7.26.x
       - run:
           name: 'Install deps (node)'
           command: make _bootstrap-node
