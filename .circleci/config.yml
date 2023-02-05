@@ -194,8 +194,6 @@ jobs:
       # TODO: add a probe step here to validate?
 
 workflows:
-  version: 2
-
   commit-validation:
     jobs:
       - build:
