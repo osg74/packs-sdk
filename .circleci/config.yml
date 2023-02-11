@@ -19,7 +19,7 @@ executors:
   default_build_environment:
     resource_class: medium
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.21
         auth:
           username: codainternaltools
           password: $DOCKERHUB_PASSWORD
