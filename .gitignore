@@ -1,12 +1,12 @@
+.cache
 .coda*
+.devcontainer
 .DS_Store
+.npmrc
 .vscode
-node_modules
 artifacts
 dist/test
-yarn-error.log
 local-docs
+node_modules
 site
-.npmrc
-.devcontainer
-.cache
+yarn-error.log
