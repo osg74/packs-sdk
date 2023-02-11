@@ -1,5 +1,4 @@
-.coda
-.coda.json
+.coda*
 .DS_Store
 .vscode
 node_modules
@@ -8,8 +7,6 @@ dist/test
 yarn-error.log
 local-docs
 site
-.coda-pack.json
-.coda-credentials.json
 .npmrc
 .devcontainer
 .cache
